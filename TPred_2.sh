@@ -50,7 +50,7 @@ do
             address ${address:-0}
             netmask ${netmask:-0}
             gateway ${gateway:-0}
-            dns-nameservers ${nameserver:-0}" | sudo tee /etc/network/interfaces >/dev/null
+            dns-nameservers ${nameserver:-0}" | sudo tee -a /etc/network/interfaces >/dev/null
 
             sudo systemctl restart networking
             read -p "Appuyez sur une touche pour continuer ..."
